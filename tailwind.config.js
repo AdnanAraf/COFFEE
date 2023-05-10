@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ["Dancing Script"],
+        poppins: ["Poppins"],
+        crimpson: ["Crimson Text"],
+        rancho: ["Rancho"],
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
