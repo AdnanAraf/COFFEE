@@ -3,6 +3,8 @@ import Navbar from "../Navbar/Navbar";
 
 import Main from "../Main/Main";
 import NavbarandFooter from "../NavbarandFooter/NavbarandFooter";
+import AddCoffeeForm from "../AddCoffeeForm/AddCoffeeForm";
+import ShowCOFFEE from "../ShowCOFFEE/ShowCOFFEE";
 
 const Routes = createBrowserRouter([
   {
@@ -11,7 +13,12 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Main />,
+        element: <ShowCOFFEE />,
+        loader: () => fetch("http://localhost:5000/COFFE"),
+      },
+      {
+        path: "addcoffee",
+        element: <AddCoffeeForm />,
       },
     ],
   },
